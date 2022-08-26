@@ -1,6 +1,9 @@
 # Proyecto-Mintic
 Proyecto de desarrollo scrum API sprint boot - Mintic
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3dc5fca2beb3548ff3c1c30a4514aac9fb237255
 roles de desarrollo 
 
 ### Integrantes equipo - Clockwork
