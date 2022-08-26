@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TaskController {
 
-    @GetMapping("/task")
+    @GetMapping("/tarea")
     public String Tasklist(){
         return "Esto es un recurso en http";
     }
