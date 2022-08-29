@@ -7,7 +7,7 @@ roles de desarrollo
 
 1 - scrum mastes - luis carlos silva aguas - labor fronted- backend
 
-2 - brayan steven ruiz sua - backend
+2 - Bryan Steven Ruiz Sua - backend
 
 3 - Ivan Santiago Enríquez Benavides - backend
 
