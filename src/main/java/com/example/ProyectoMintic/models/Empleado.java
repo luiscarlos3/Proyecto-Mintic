@@ -1,35 +1,12 @@
-package com.example.demo;
+package com.example.ProyectoMintic.models;
 
-public class Empleado{
-
+public class Empleado {
     private String identificacion;
     private String nombre;
     private String apellido;
     private String telefono;
     private String correo;
     private String rol;
-
-    private String user_empleado;
-
-    private String password;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-
-    public String getUser_empleado() {
-        return user_empleado;
-    }
-
-    public void setUser_empleado(String user_empleado) {
-        this.user_empleado = user_empleado;
-    }
 
     public String getIdentificacion() {
         return identificacion;
@@ -78,5 +55,4 @@ public class Empleado{
     public void setRol(String rol) {
         this.rol = rol;
     }
-
 }

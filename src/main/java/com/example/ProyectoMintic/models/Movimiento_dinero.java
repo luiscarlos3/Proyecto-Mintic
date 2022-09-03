@@ -1,8 +1,9 @@
-package com.example.demo;
+package com.example.ProyectoMintic.models;
 
 import java.time.LocalDate;
 
 public class Movimiento_dinero {
+
     private String num_cuenta;
     private double valor;
     private LocalDate fecha;

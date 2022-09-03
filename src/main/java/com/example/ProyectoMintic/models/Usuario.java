@@ -1,31 +1,12 @@
-package com.example.demo;
+package com.example.ProyectoMintic.models;
 
-public class Usuario  {
+public class Usuario {
 
     private String nombre;
     private String apellido;
     private String telefono;
     private String correo;
     private String name_user;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    private String password;
-
-
-    public String getName_user() {
-        return name_user;
-    }
-
-    public void setName_user(String name_user) {
-        this.name_user = name_user;
-    }
 
     public String getNombre() {
         return nombre;
@@ -57,5 +38,13 @@ public class Usuario  {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public String getName_user() {
+        return name_user;
+    }
+
+    public void setName_user(String name_user) {
+        this.name_user = name_user;
     }
 }

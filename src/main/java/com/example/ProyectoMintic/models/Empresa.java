@@ -1,7 +1,9 @@
-package com.example.demo;
+package com.example.ProyectoMintic.models;
 
 import java.time.LocalDate;
+
 public class Empresa {
+
     private String id_empresa;
     private String nombre;
     private String razon_social;
