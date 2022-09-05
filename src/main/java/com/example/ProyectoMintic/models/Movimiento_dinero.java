@@ -4,40 +4,37 @@ import java.time.LocalDate;
 
 public class Movimiento_dinero {
 
-    private String num_cuenta;
-    private double valor;
-    private LocalDate fecha;
-    private String banco;
+    private double monto;
+    private String concepto;
+    private String usuarioMovimiento;
 
-    public String getNum_cuenta() {
-        return num_cuenta;
+    public Movimiento_dinero(double monto, String concepto, String usuarioMovimiento) {
+        this.monto = monto;
+        this.concepto = concepto;
+        this.usuarioMovimiento = usuarioMovimiento;
     }
 
-    public void setNum_cuenta(String num_cuenta) {
-        this.num_cuenta = num_cuenta;
+    public double getMonto() {
+        return monto;
     }
 
-    public double getValor() {
-        return valor;
+    public void setMonto(double monto) {
+        this.monto = monto;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public String getConcepto() {
+        return concepto;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
     }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
+    public String getUsuarioMovimiento() {
+        return usuarioMovimiento;
     }
 
-    public String getBanco() {
-        return banco;
-    }
-
-    public void setBanco(String banco) {
-        this.banco = banco;
+    public void setUsuarioMovimiento(String usuarioMovimiento) {
+        this.usuarioMovimiento = usuarioMovimiento;
     }
 }

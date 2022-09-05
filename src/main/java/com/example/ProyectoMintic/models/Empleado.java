@@ -6,6 +6,13 @@ public class Empleado {
     private String empresa;
     private String rol;
 
+    public Empleado(String nombre, String correo, String empresa, String rol) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.empresa = empresa;
+        this.rol = rol;
+    }
+
     public String getNombre() {
         return nombre;
     }

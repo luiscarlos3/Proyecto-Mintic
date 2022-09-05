@@ -8,6 +8,13 @@ public class Empresa {
     private String telefono;
     private LocalDate nit;
 
+    public Empresa(String nombre, String direccion, String telefono, LocalDate nit) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.nit = nit;
+    }
+
     public String getNombre() {
         return nombre;
     }
