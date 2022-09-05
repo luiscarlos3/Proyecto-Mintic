@@ -3,21 +3,10 @@ package com.example.ProyectoMintic.models;
 import java.time.LocalDate;
 
 public class Empresa {
-
-    private String id_empresa;
     private String nombre;
-    private String razon_social;
+    private String direccion;
     private String telefono;
-    private LocalDate fecha_creacion;
-    private LocalDate fecha_actualizacion;
-
-    public String getId_empresa() {
-        return id_empresa;
-    }
-
-    public void setId_empresa(String id_empresa) {
-        this.id_empresa = id_empresa;
-    }
+    private LocalDate nit;
 
     public String getNombre() {
         return nombre;
@@ -27,12 +16,12 @@ public class Empresa {
         this.nombre = nombre;
     }
 
-    public String getRazon_social() {
-        return razon_social;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setRazon_social(String razon_social) {
-        this.razon_social = razon_social;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getTelefono() {
@@ -43,19 +32,11 @@ public class Empresa {
         this.telefono = telefono;
     }
 
-    public LocalDate getFecha_creacion() {
-        return fecha_creacion;
+    public LocalDate getNit() {
+        return nit;
     }
 
-    public void setFecha_creacion(LocalDate fecha_creacion) {
-        this.fecha_creacion = fecha_creacion;
-    }
-
-    public LocalDate getFecha_actualizacion() {
-        return fecha_actualizacion;
-    }
-
-    public void setFecha_actualizacion(LocalDate fecha_actualizacion) {
-        this.fecha_actualizacion = fecha_actualizacion;
+    public void setNit(LocalDate nit) {
+        this.nit = nit;
     }
 }
