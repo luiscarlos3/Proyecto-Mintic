@@ -1,16 +1,38 @@
 package com.example.ProyectoMintic.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Empleado {
+    @Id
+    private String identificacion;
+    @Column
     private String nombre;
+    @Column
     private String correo;
+    @Column
     private String empresa;
+    @Column
     private String rol;
 
+public Empleado(){
+
+}
     public Empleado(String nombre, String correo, String empresa, String rol) {
         this.nombre = nombre;
         this.correo = correo;
         this.empresa = empresa;
         this.rol = rol;
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
     public String getNombre() {
