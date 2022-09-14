@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Empleado {
+public class empleado {
     @Id
     private String identificacion;
     @Column
@@ -14,17 +14,19 @@ public class Empleado {
     private String correo;
     @Column
     private String empresa;
-    @Column
-    private String rol;
 
-public Empleado(){
+    @Column
+    private int empleado_rol;
+
+public empleado(){
 
 }
-    public Empleado(String nombre, String correo, String empresa, String rol) {
+    public empleado(String identificacion , String nombre, String correo, String empresa, int empleado_rol) {
+        this.identificacion = identificacion;
         this.nombre = nombre;
         this.correo = correo;
         this.empresa = empresa;
-        this.rol = rol;
+        this.empleado_rol = empleado_rol;
     }
 
     public String getIdentificacion() {
@@ -58,12 +60,13 @@ public Empleado(){
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
-
-    public String getRol() {
-        return rol;
+    public int getEmpleado_rol() {
+        return empleado_rol;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setEmpleado_rol(int empleado_rol) {
+        this.empleado_rol = empleado_rol;
     }
+
+
 }
