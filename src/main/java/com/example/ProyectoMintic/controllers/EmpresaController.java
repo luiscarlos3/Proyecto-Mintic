@@ -57,7 +57,7 @@ public class EmpresaController {
     @PutMapping("/actualizar/{codigo}")
     public ResponseEntity<?> actualizarEmpresa(@RequestBody empresa Entidad, @PathVariable String codigo){
         try {
-            com.example.ProyectoMintic.models.empresa empresaActual = EmpresaServicio.obtenerEmpresaPorCodigo(codigo);
+            empresa empresaActual = EmpresaServicio.obtenerEmpresaPorCodigo(codigo);
             empresaActual.setCodigo(Entidad.getCodigo());
             empresaActual.setNombre_empresa(Entidad.getNombre_empresa());
             return new ResponseEntity<empresa>(HttpStatus.OK);

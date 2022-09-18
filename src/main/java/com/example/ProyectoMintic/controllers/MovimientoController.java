@@ -1,21 +1,20 @@
 package com.example.ProyectoMintic.controllers;
 
-import com.example.ProyectoMintic.models.Movimiento_dinero;
-
 import com.example.ProyectoMintic.servicio.MovimientoServicio;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.ProyectoMintic.models.Movimiento_dinero;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 
 @RestController
 @RequestMapping("movimiento")
 
 public class MovimientoController {
-
     @Autowired
     private MovimientoServicio movimientoServicio;
 
@@ -35,12 +34,13 @@ public class MovimientoController {
         movimientoServicio.guardarMovimiento(movimiento);
     }
 
+
     @GetMapping("/listar")
     public List<Movimiento_dinero> Listar(){
         return movimientoServicio.listarMovimiento();
     }
 
-    @GetMapping("Transaccion/{codigo}")
+    @GetMapping("/transaccion/{codigo}")
     public ResponseEntity<Movimiento_dinero> obtenerMovimientos(@PathVariable int codigo){
         try {
             Movimiento_dinero Transaccion = movimientoServicio.obtenerMovimientoPorid(codigo);
@@ -55,12 +55,13 @@ public class MovimientoController {
     @DeleteMapping("/eliminar/{codigo}")
     public void Eliminar(@PathVariable int codigo){movimientoServicio.eliminarmMovimiento(codigo);
     }
-    @PutMapping("/actualizar/{identificacion}")
+    @PutMapping("/actualizar/{codigo}")
     public ResponseEntity<?> actualizarMovimiento(@RequestBody Movimiento_dinero Transacion, @PathVariable int codigo){
         try {
             Movimiento_dinero transacion = movimientoServicio.obtenerMovimientoPorid(codigo);
-            transacion.setId_movimiento(transacion.getId_movimiento());
-
+            //transacion.setId_movimiento(transacion.getId_movimiento());
+            transacion.setConcepto(transacion.getConcepto());
+            movimientoServicio.guardarMovimiento(Transacion);
             return new ResponseEntity<Movimiento_dinero>(HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<Movimiento_dinero>(HttpStatus.NOT_FOUND);
@@ -69,5 +70,11 @@ public class MovimientoController {
 
         }
     }
+
+
+
+
+
+
 
 }

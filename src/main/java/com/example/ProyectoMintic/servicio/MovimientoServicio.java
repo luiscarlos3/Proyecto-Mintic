@@ -3,9 +3,11 @@ package com.example.ProyectoMintic.servicio;
 import com.example.ProyectoMintic.models.Movimiento_dinero;
 import com.example.ProyectoMintic.repositorio.RepositorioMovimientoDinero;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MovimientoServicio {
 
     @Autowired
