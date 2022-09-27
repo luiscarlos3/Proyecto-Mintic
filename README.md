@@ -5,7 +5,7 @@ roles de desarrollo
 
 ### Integrantes equipo - Clockwork
 
-1 - scrum mastes - luis carlos silva aguas - labor fronted- backend
+1 - Scrum Masters - luis carlos silva aguas - labor fronted- backend
 
 2 - Bryan Steven Ruiz Sua - backend
 
