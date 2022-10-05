@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Pagina web Empresas</title>
+</head>
+<body>
+<div class="wrapper">
+    <form action="#">
+        <div class="field email">
+            <div class="input-area">
+                <input type="text" name="" id="email" placeholder="Ingrese Email">
+                <i class="icon fas fa-envelope"></i>
+                <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-text">Por favor ingrese email</div>
+        </div>
+        <div class="field password">
+            <div class="input-area">
+                <input type="password" name="" id="password" placeholder="Ingrese Contraseña">
+                <i class="icon fas fa-lock"></i>
+                <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-text">Por favor ingrese contraseña</div>
+        </div>
+        <div class="pass-link">
+            <a href="#">Recuperar contraseña?</a>
+        </div>
+        <input type="submit" value="Ingresar">
+    </form>
+</div>
+<script src="js/scripts.js"></script>
+</body>
+</html>
