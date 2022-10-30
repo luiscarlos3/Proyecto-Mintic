@@ -5,7 +5,7 @@ spring:
       client:
         registration:
           auth0:
-            client-id: 5qm4czQ5qfSrQqYjc2gqKREN6Uogpz9j
+            client-id: itx2fkvyQrl9GlkyDdXKtTJMjiydTooU
             client-secret: lKrg2RPj-Kt82t1JkZ9tdsLvgbI0y_rxWrMl6DtZbp-WvBdSfyMwN4xYzpdDtFAm
             scope:
               - openid
@@ -14,4 +14,4 @@ spring:
         provider:
           auth0:
             # trailing slash is important!
-            issuer-uri: https://dev-1tl4h5z5.us.auth0.com/
+            issuer-uri: https://dev-y6i5ioy31lsld5uq.us.auth0.com/

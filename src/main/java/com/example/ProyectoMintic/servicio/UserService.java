@@ -1,9 +1,9 @@
 
-package com.example.demo1.services;
+package com.example.ProyectoMintic.servicio;
 
 
-import com.example.demo1.entities.User;
-import com.example.demo1.repositories.UserRepository;
+import com.example.ProyectoMintic.models.User;
+import com.example.ProyectoMintic.repositorio.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

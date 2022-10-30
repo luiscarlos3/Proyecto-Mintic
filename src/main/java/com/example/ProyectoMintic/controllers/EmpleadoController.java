@@ -3,9 +3,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.ProyectoMintic.models.empleado;
+import com.example.ProyectoMintic.models.User;
 import com.example.ProyectoMintic.servicio.EmpleadoServicio;
+import com.example.ProyectoMintic.servicio.UserService;
 
 import java.lang.reflect.Array;
 import java.util.*;
@@ -15,6 +21,18 @@ import java.util.*;
 public class EmpleadoController {
     @Autowired
     private EmpleadoServicio empleadoServices;
+    private  UserService userService;
+
+
+
+    @GetMapping("/")
+    public String index(Model model, @AuthenticationPrincipal OidcUser principal){
+        if(principal != null){
+            User user = this.userService.getOrCreateUser(principal.getClaims());
+            model.addAttribute("user", user);
+        }
+        return "login";
+    }
 
     @PostMapping("/Guardar")
     public void guardar(@RequestBody empleado persona) {

@@ -1,70 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    
-<div>
-
-<ul class="opciones1">
-
-<li><a href="index.html" target="blink">Retroceder al Inicio</a></li>
-<li><a href="usuario.html" target="blink">Ir al usuario</a></li>
-
-</ul>
-
-</div>
-
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, soluta inventore tenetur quod, exercitationem sequi consequatur temporibus quos aspernatur dolor ab excepturi est eaque, rerum error. Earum repellat quibusdam corrupti?</p>
-<br>
-<br>
-    
-
-<script src="login.js"></script>
+<main>
+    <div class="px-4 py-5 my5 text-center">
+        <img src="img/task.png" class="d-block mx-auto mb-4" height="100" alt="Listado de tareas">
+        <h1 class="display-5 fw-bold">Listado de Tareas</h1>
+        <div class="col-lg-6 mx-auto">
+            <p> En este listado, podrás saber tu agenda diaria de las tareas que debes realizar a lo largo de un período. </p>
+            <div sec:authorize="!isAuthenticated()">
+                <a th:href="@{/oauth2/authorization/auth0}" class="btn btn-primary btn-lg px-4 gap-3">Iniciar Sesión</a>
+            </div>
+            <div sec:authorize="isAuthenticated()">
+                <h3 th:text="'Bienvenido, ' + ${user.getEmail()}"></h3>
+                <a th:href="@{/tasks}" class="btn btn-primary btn-lg px-4 gap-3">Ir a la aplicación</a>
+            </div>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Más...</button>
+        </div>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.ProyectoMintic.servicio;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

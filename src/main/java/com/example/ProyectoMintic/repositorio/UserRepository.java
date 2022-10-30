@@ -1,6 +1,6 @@
-package com.example.demo1.repositories;
+package com.example.ProyectoMintic.repositorio;
 
-import com.example.demo1.entities.User;
+import com.example.ProyectoMintic.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

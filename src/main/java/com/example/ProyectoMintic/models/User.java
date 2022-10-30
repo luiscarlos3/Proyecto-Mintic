@@ -1,4 +1,4 @@
-package com.example.demo1.entities;
+package com.example.ProyectoMintic.models;
 
 import javax.persistence.*;
 
