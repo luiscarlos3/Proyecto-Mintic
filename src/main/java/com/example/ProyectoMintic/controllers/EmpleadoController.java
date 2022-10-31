@@ -31,7 +31,7 @@ public class EmpleadoController {
             User user = this.userService.getOrCreateUser(principal.getClaims());
             model.addAttribute("user", user);
         }
-        return "login";
+        return "Login";
     }
 
     @PostMapping("/Guardar")
